@@ -12,27 +12,33 @@ class Login extends CI_Controller{
     }
 
 	public function aksi_login(){
-		$nis = $this->input->post('nis');
-		$where = array('nis' => $nis);
-		try {
-			$query = $this->m_login->cek_login('user',$where);
-			if ($query !== false) {
-				$cek = $query->num_rows();
-				if($cek > 0){
-					$data_session = array('nis' => $nis, 'status' => "login");
-					$this->session->set_userdata($data_session);
-					redirect(base_url("admin"));
-				} else {
-					echo "nis salah !";
-				}
-			} else {
-				echo "Query failed";
-			}
-		} catch (Exception $e) {
-			log_message('error', $e->getMessage());
-			echo "Terjadi kesalahan saat mencoba untuk masuk. Silakan coba lagi.";
-		}
-	}
+        $nis = $this->input->post('nis');
+        $where = array('nis' => $nis);
+        try {
+            $query = $this->m_login->cek_login('user',$where);
+            if ($query !== false) {
+                $cek = $query->num_rows();
+                if($cek > 0){
+                    $data_session = array(
+                        'nis' => $nis,
+                        'nama' => $query->row()->nama, // Simpan nama pengguna dalam session
+                        'status' => "login"
+                    );
+                    $this->session->set_userdata($data_session);
+                    redirect(base_url("admin"));
+                } else {
+                    echo "nis salah !";
+                }
+            } else {
+                echo "Query failed";
+            }
+        } catch (Exception $e) {
+            log_message('error', $e->getMessage());
+            echo "Terjadi kesalahan saat mencoba untuk masuk. Silakan coba lagi.";
+        }
+    }
+    
+
 	
     
 
@@ -52,6 +58,8 @@ class Login extends CI_Controller{
             redirect('login');
         }
     }
+
+    
     
  
     function logout(){

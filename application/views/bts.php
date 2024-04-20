@@ -26,87 +26,120 @@
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f1f1f1; /* Warna latar belakang */
-        }
+	<style>
+		body {
+			margin: 0;
+			font-family: Arial, sans-serif;
+			background-color: #f1f1f1;
+			/* Warna latar belakang */
+		}
 
-        .sidebar {
-            height: 100%;
-            width: 0;
-            position: fixed;
-            z-index: 1;
-            top: 0;
-            left: 0;
-            background-color: #111;
-            overflow-x: hidden;
-            transition: 0.5s;
-            padding-top: 60px;
-        }
+		.sidebar {
+			height: 100%;
+			width: 0;
+			position: fixed;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			background-color: #111;
+			overflow-x: hidden;
+			transition: 0.5s;
+			padding-top: 60px;
+		}
 
-        .sidebar a {
-            padding: 10px 15px;
-            text-decoration: none;
-            font-size: 20px; /* Mengurangi ukuran tulisan */
-            color: #818181;
-            display: block;
-            transition: 0.3s;
-        }
+		.sidebar a {
+			padding: 10px 15px;
+			text-decoration: none;
+			font-size: 20px;
+			/* Mengurangi ukuran tulisan */
+			color: #818181;
+			display: block;
+			transition: 0.3s;
+		}
 
-        .sidebar a:hover {
-            color: #f1f1f1;
-        }
+		.sidebar a:hover {
+			color: #f1f1f1;
+		}
 
-        .sidebar .close-btn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px; /* Ukuran icon toggle */
-            color: #333; /* Warna icon toggle */
-            margin-left: 50px;
-        }
+		.sidebar .close-btn {
+			position: absolute;
+			top: 0;
+			right: 25px;
+			font-size: 36px;
+			/* Ukuran icon toggle */
+			color: #333;
+			/* Warna icon toggle */
+			margin-left: 50px;
+		}
 
-        .open-btn {
-            font-size: 36px; /* Ukuran icon toggle */
-            cursor: pointer;
-            position: fixed;
-            z-index: 2;
-            top: 20px;
-            left: 20px;
-            color: #333; /* Warna icon toggle */
-        }
 
-        .open-btn:hover {
-            color: #fff; /* Warna icon toggle saat dihover */
-        }
+		.open-btn {
+			position: fixed;
+			top: 20px;
+			left: 40px;
+			/* Adjust this value to move the toggle icon */
+			z-index: 1000;
+			/* Ensure the toggle icon is above other elements */
+			font-size: 36px;
+			/* Enlarge the toggle icon */
+			cursor: pointer;
+		}
 
-        @media screen and (max-height: 450px) {
-            .sidebar {
-                padding-top: 15px;
-            }
-		
+		.download-icon {
+			position: fixed;
+			top: 20px;
+			right: 20px;
+			/* Adjust this value to position the download icon next to the toggle icon */
+			z-index: 1000;
+			/* Ensure the download icon is above other elements */
+			font-size: 36px;
+			/* Enlarge the download icon */
+			cursor: pointer;
+			color: white;
+			/* Mengubah warna ikon download menjadi putih */
+
+		}
+
+
+		.download-icon:hover {
+			color: blue;
+			/* Mengubah warna ikon download menjadi biru saat di-hover */
+		}
+
+		.open-btn:hover {
+			color: #fff;
+			/* Warna icon toggle saat dihover */
+		}
+
+		@media screen and (max-height: 450px) {
+			.sidebar {
+				padding-top: 15px;
+			}
+
 			@media screen and (min-width: 768px) {
-    .open-btn {
-        display: none; /* Menyembunyikan icon toggle pada layar lebar */
-    }
-}
+				.open-btn {
+					display: none;
+					/* Menyembunyikan icon toggle pada layar lebar */
+				}
+			}
 
 
-            .sidebar a {
-                font-size: 16px; /* Ukuran tulisan untuk layar kecil */
-            }
+			.sidebar a {
+				font-size: 16px;
+				/* Ukuran tulisan untuk layar kecil */
+			}
 
-            .sidebar .close-btn {
-                font-size: 28px; /* Ukuran icon toggle untuk layar kecil */
-            }
+			.sidebar .close-btn {
+				font-size: 28px;
+				/* Ukuran icon toggle untuk layar kecil */
+			}
 
-            .open-btn {
-                font-size: 28px; /* Ukuran icon toggle untuk layar kecil */
-            }
-        }
-    </style>
+			.open-btn {
+				font-size: 28px;
+				/* Ukuran icon toggle untuk layar kecil */
+			}
+		}
+	</style>
 </head>
 
 <body>
@@ -114,28 +147,36 @@
 	</head>
 
 	<body>
-	
-    <div class="sidebar" id="sidebar">
-        <a href="#" class="close-btn" onclick="closeSidebar()">&times;</a>
-		<a href="#hero" onclick="closeSidebar()">Buku Tahunan Siswa</a>
-		<a href="#sampuldepan" onclick="closeSidebar()">Sampul Depan</a>
-        <a href="#daftarisi" onclick="closeSidebar()"onclick="closeSidebar()">Daftar Isi</a>
-        <a href="#wks"onclick="closeSidebar()">Kepala Sekolah</a>
-		<a href="#datguru"onclick="closeSidebar()">Guru dan Karyawan</a>
-		<a href="#wkps"onclick="closeSidebar()">Ketua Pengurus OSIS</a>
-		<a href="#fbps"onclick="closeSidebar()">Pengurus OSIS</a>
-		<a href="#"onclick="closeSidebar()">Dewan Perwakilan Kelas</a>
-		<a href="#"onclick="closeSidebar()">Program Keahlian</a>
-		<a href="#dss"onclick="closeSidebar()">Siswa dan Siswi</a>
-		<a href="#"onclick="closeSidebar()">Foto Ekstrakurikuler</a>
-		<a href="#sb"onclick="closeSidebar()">Sampul Belakang</a>
+
+		<div class="sidebar" id="sidebar">
+			<a href="#" class="close-btn" onclick="closeSidebar()">&times;</a>
+			<a href="#hero" onclick="closeSidebar()">Buku Tahunan Siswa</a>
+			<a href="#sampuldepan" onclick="closeSidebar()">Sampul Depan</a>
+			<a href="#daftarisi" onclick="closeSidebar()" onclick="closeSidebar()">Daftar Isi</a>
+			<a href="#wks" onclick="closeSidebar()">Kepala Sekolah</a>
+			<a href="#datguru" onclick="closeSidebar()">Guru dan Karyawan</a>
+			<a href="#wkps" onclick="closeSidebar()">Ketua Pengurus OSIS</a>
+			<a href="#fbps" onclick="closeSidebar()">Pengurus OSIS</a>
+			<a href="#" onclick="closeSidebar()">Dewan Perwakilan Kelas</a>
+			<a href="#" onclick="closeSidebar()">Program Keahlian</a>
+			<a href="#dss" onclick="closeSidebar()">Siswa dan Siswi</a>
+			<a href="#" onclick="closeSidebar()">Foto Ekstrakurikuler</a>
+			<a href="#sb" onclick="closeSidebar()">Sampul Belakang</a>
 
 
-    </div>
+		</div>
 
-	<div id="open-btn" class="open-btn" onclick="openSidebar()">
-    <i class="fas fa-bars"></i>
-	</div>
+		<div id="open-btn" class="open-btn" onclick="openSidebar()">
+			<i class="fas fa-bars"></i>
+		</div>
+		<div  class="download-icon">
+			<a href="login">
+				<i class="fas fa-download"></i>
+			</a>
+		</div>
+
+
+
 
 
 		<main id="main">
@@ -226,18 +267,32 @@
 		<script src="<?php echo base_url('assets/vendor/php-email-form/validate.js'); ?>"></script>
 
 		<script src="<?php echo base_url('assets/js/main.js'); ?>"></script>
-
 		<script>
-    function openSidebar() {
-        document.getElementById("sidebar").style.width = "250px";
-        document.getElementById("open-btn").style.visibility = "hidden"; // Sembunyikan icon toggle saat sidebar terbuka
-    }
+			function openSidebar() {
+				var sidebar = document.getElementById("sidebar");
+				var downloadIcon = document.getElementById("download-icon");
+				var openBtn = document.getElementById("open-btn");
 
-	function closeSidebar() {
-        document.getElementById("sidebar").style.width = "0";
-        document.getElementById("open-btn").style.visibility = "visible"; // Tampilkan kembali icon toggle setelah sidebar tertutup
-    }
-</script>
+				if (sidebar.style.width === "250px") {
+					sidebar.style.width = "0";
+					downloadIcon.style.right = "20px"; // Mengembalikan posisi icon download saat sidebar tertutup
+					openBtn.style.display = "block"; // Menampilkan kembali icon toggle setelah sidebar tertutup
+				} else {
+					sidebar.style.width = "250px"; // Menggeser icon download saat sidebar terbuka
+					openBtn.style.display = "none"; // Sembunyikan icon toggle saat sidebar terbuka
+				}
+			}
+
+
+			function closeSidebar() {
+				var sidebar = document.getElementById("sidebar");
+				var openBtn = document.getElementById("open-btn");
+				var downloadIcon = document.getElementById("download-icon");
+
+				sidebar.style.width = "0";
+				openBtn.style.display = "block"; // Menampilkan kembali icon toggle
+			}
+		</script>
 
 	</body>
 
