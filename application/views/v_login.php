@@ -1,17 +1,11 @@
-<?php
-// Cek apakah pengguna sudah login
-if ($this->session->userdata('status') === 'login') {
-    redirect('admin'); // Ganti 'admin/dashboard' dengan URL halaman yang diinginkan
-}
-?>
-
 <!DOCTYPE html>
 <html>
 
 <head>
-	<title>Form Login| Jurnalistik Smekensa</title>
+	<title>Form Login | Jurnalistik Smekensa</title>
 	<link href="<?php echo base_url('assets/img/LOGO_JURNALISTIK.png'); ?>" rel="icon">
 	<link href="<?php echo base_url('assets/img/LOGO_JURNALISTIK.png'); ?>" rel="apple-touch-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
 			background-color: #fff;
@@ -24,18 +18,18 @@ if ($this->session->userdata('status') === 'login') {
 
 		h1 {
 			text-align: center;
-			margin-bottom: 100px;
-			margin-top: 50px;
+			margin-bottom: 50px;
+			margin-top: 20px;
 			/* Posisi teks rata tengah */
 		}
 
 		form {
-			width: 300px;
-			/* Lebar form */
+			max-width: 400px;
+			/* Lebar maksimum form */
 			margin: 20px auto;
 			/* Posisi form di tengah halaman */
 			padding: 20px;
-		
+
 			/* Warna latar belakang form */
 			border-radius: 5px;
 			/* Sudut border melengkung */
@@ -68,7 +62,6 @@ if ($this->session->userdata('status') === 'login') {
 			/* Sudut border melengkung */
 		}
 
-
 		input[type="submit"] {
 			width: 100%;
 			/* Lebar tombol 100% */
@@ -88,24 +81,50 @@ if ($this->session->userdata('status') === 'login') {
 			background-color: #000ff0;
 			/* Warna tombol saat dihover */
 		}
+
+		/* Responsive Styles */
+		@media screen and (max-width: 480px) {
+			form {
+				padding: 10px;
+			}
+
+			h1 {
+				margin-bottom: 30px;
+			}
+		}
+
+		.pesan {
+			text-align: center;
+		}
+
+		.container{
+			justify-content: center;
+			text-align: center;
+		}
+		
+		.judul{
+			margin-top: 200px;
+		}
 	</style>
 </head>
 
 <body>
-	<h1>Form Login</h1>
-	<form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
-		<table style="border: none;"> <!-- Hapus border pada tabel -->
-			<tr>
-				<td><label for="nis">Username</label></td>
-			</tr>
-			<tr>
-				<td><input type="text" id="nis" name="nis"></td>
-			</tr>
-			<tr>
-				<td><input type="submit" value="Login"></td>
-			</tr>
-		</table>
-	</form>
+	<div class="container">
+		<h1 class="judul">Login Buku Tahunan Siswa Elektronik</h1>
+		<form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
+			<table style="border: none;"> <!-- Hapus border pada tabel -->
+				<tr>
+					<td><label for="nis" class="pesan">Masukkan NIS Anda</label></td>
+				</tr>
+				<tr>
+					<td><input type="text" id="nis" name="nis"></td>
+				</tr>
+				<tr>
+					<td><input type="submit" value="Login"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
 </body>
 
 </html>

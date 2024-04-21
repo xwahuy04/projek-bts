@@ -41,7 +41,7 @@
 			z-index: 1;
 			top: 0;
 			left: 0;
-			background-color: #111;
+			background-color:  #333;
 			overflow-x: hidden;
 			transition: 0.5s;
 			padding-top: 60px;
@@ -52,13 +52,13 @@
 			text-decoration: none;
 			font-size: 20px;
 			/* Mengurangi ukuran tulisan */
-			color: #818181;
+			color: #fff;
 			display: block;
 			transition: 0.3s;
 		}
 
 		.sidebar a:hover {
-			color: #f1f1f1;
+			color: #007bff;
 		}
 
 		.sidebar .close-btn {
@@ -67,7 +67,7 @@
 			right: 25px;
 			font-size: 36px;
 			/* Ukuran icon toggle */
-			color: #333;
+			color: #fff;
 			/* Warna icon toggle */
 			margin-left: 50px;
 		}
@@ -77,6 +77,7 @@
 			position: fixed;
 			top: 20px;
 			left: 40px;
+			color: #fff;
 			/* Adjust this value to move the toggle icon */
 			z-index: 1000;
 			/* Ensure the toggle icon is above other elements */
@@ -84,6 +85,12 @@
 			/* Enlarge the toggle icon */
 			cursor: pointer;
 		}
+
+		.open-btn:hover {
+			color: #007bff;
+			/* Warna icon toggle saat dihover */
+		}
+
 
 		.download-icon {
 			position: fixed;
@@ -95,21 +102,35 @@
 			font-size: 36px;
 			/* Enlarge the download icon */
 			cursor: pointer;
-			color: white;
+			color: #fff;
 			/* Mengubah warna ikon download menjadi putih */
-
+			transition: color 0.3s ease;
+			/* Efek transisi saat perubahan warna */
 		}
 
 
 		.download-icon:hover {
-			color: blue;
-			/* Mengubah warna ikon download menjadi biru saat di-hover */
+			color: #ffff;
+			/* Mengubah warna ikon download menjadi biru saat dihover */
 		}
 
-		.open-btn:hover {
+
+		.autoplay-icon {
+			position: fixed;
+			top: 20px;
+			right: 70px;
+			/* Sesuaikan dengan posisi yang diinginkan */
+			z-index: 1000;
+			font-size: 36px;
+			cursor: pointer;
 			color: #fff;
-			/* Warna icon toggle saat dihover */
 		}
+
+		.autoplay-icon:hover {
+			color: #ffff;
+			/* Warna ikon autoplay saat di-hover */
+		}
+
 
 		@media screen and (max-height: 450px) {
 			.sidebar {
@@ -169,9 +190,14 @@
 		<div id="open-btn" class="open-btn" onclick="openSidebar()">
 			<i class="fas fa-bars"></i>
 		</div>
-		<div  class="download-icon">
+		<div class="download-icon">
 			<a href="login">
 				<i class="fas fa-download"></i>
+			</a>
+		</div>
+		<div class="autoplay-icon">
+			<a onclick="toggleAutoplay()">
+				<i id="autoplay-btn" class="fas fa-play"></i>
 			</a>
 		</div>
 
@@ -291,6 +317,34 @@
 
 				sidebar.style.width = "0";
 				openBtn.style.display = "block"; // Menampilkan kembali icon toggle
+			}
+
+			let isAutoplay = false;
+			let scrollInterval;
+
+			function toggleAutoplay() {
+				isAutoplay = !isAutoplay;
+				const autoplayBtn = document.getElementById('autoplay-btn');
+
+				if (isAutoplay) {
+					autoplayBtn.classList.remove('fa-play');
+					autoplayBtn.classList.add('fa-pause');
+					startAutoplay();
+				} else {
+					autoplayBtn.classList.remove('fa-pause');
+					autoplayBtn.classList.add('fa-play');
+					stopAutoplay();
+				}
+			}
+
+			function startAutoplay() {
+				scrollInterval = setInterval(() => {
+					window.scrollBy(0, 20); // Adjust scroll speed as needed
+				}, 100); // Adjust scroll interval as needed (milliseconds)
+			}
+
+			function stopAutoplay() {
+				clearInterval(scrollInterval);
 			}
 		</script>
 
