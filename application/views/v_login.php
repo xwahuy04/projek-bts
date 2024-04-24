@@ -97,14 +97,29 @@
 			text-align: center;
 		}
 
-		.container{
+		.container {
 			justify-content: center;
 			text-align: center;
 		}
-		
-		.judul{
+
+		.judul {
 			margin-top: 200px;
 		}
+
+	  /* Gaya untuk tombol Kembali */
+	  .btn-back {
+            display: inline-block;
+            padding: 8px 20px;
+            background-color:  #272829;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .btn-back:hover {
+            background-color: #aaa;
+        }
+
 	</style>
 </head>
 
@@ -122,6 +137,10 @@
 				<tr>
 					<td><input type="submit" value="Login"></td>
 				</tr>
+				<tr>
+					<td><a href="http://localhost/projek-bts/" class="btn-back">Kembali</a></td>
+				</tr>
+
 			</table>
 		</form>
 	</div>

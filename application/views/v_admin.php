@@ -81,8 +81,8 @@
             background-color: #fff;
         }
 
-                /* Media queries untuk tampilan layar kecil */
-            @media screen and (max-width: 768px) {
+        /* Media queries untuk tampilan layar kecil */
+        @media screen and (max-width: 768px) {
             h1 {
                 font-size: 1.5rem;
                 /* Ukuran teks h1 pada layar kecil */
@@ -104,7 +104,6 @@
                 /* Ukuran tombol pada layar kecil */
             }
         }
-
     </style>
 </head>
 
