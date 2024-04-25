@@ -132,9 +132,17 @@ body {
       padding: 10px;
     }
  }
- #video-frame {
-    display: none; /* Sembunyikan iFrame video */
+#video-frame {
+  display: none; /* Sembunyikan iFrame video */
 }
+
+#video-frame-2 {
+  display: none; /* Sembunyikan iFrame video kedua */
+}
+
+
+
+
 
 /*--------------------------------------------------------------
 # Sections General

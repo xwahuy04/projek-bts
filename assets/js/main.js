@@ -387,3 +387,9 @@ window.addEventListener('DOMContentLoaded', event => {
     videoFrame.style.display = 'block'; // Tampilkan iFrame video
     videoFrame.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
 }
+
+function playVideo2() {
+  var videoFrame2 = document.getElementById('video-frame-2');
+  videoFrame2.style.display = 'block'; // Tampilkan iFrame video kedua
+  videoFrame2.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*');
+}

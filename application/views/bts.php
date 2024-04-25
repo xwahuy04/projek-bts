@@ -89,7 +89,8 @@
 
 		.navbar-toggler {
 			color: #fff;
-			margin-left: 10px; /* Ubah margin-left menjadi 10px */
+			margin-left: 10px;
+			/* Ubah margin-left menjadi 10px */
 			order: -1;
 		}
 
@@ -221,7 +222,7 @@
 			}
 		}
 
-		
+
 
 		.navbar {
 			display: flex;
@@ -240,72 +241,72 @@
 		}
 
 		/* Styles for smaller screens */
-@media (max-width: 768px) {
-    .navbar-brand {
-        display: flex;
-        align-items: center;
-    }
+		@media (max-width: 768px) {
+			.navbar-brand {
+				display: flex;
+				align-items: center;
+			}
 
-    .navbar-toggler {
-        margin-right: 10px; /* Atur jarak antara ikon toggler dan teks */
-		margin-left: -10px;
-    }
+			.navbar-toggler {
+				margin-right: 10px;
+				/* Atur jarak antara ikon toggler dan teks */
+				margin-left: -10px;
+			}
 
-    .navbar-brand,
-    .navbar-collapse {
-        flex-grow: 1;
-    }
-}
-
+			.navbar-brand,
+			.navbar-collapse {
+				flex-grow: 1;
+			}
+		}
 	</style>
 
 </head>
 
 <body>
 	<nav class="navbar navbar-expand-lg">
-    <div class="container-fluid">
-	<a class="navbar-brand" href="#">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i id="toggle-icon" class="fa-solid fa-bars"></i>
-            </button>
-            Jurnalistik - Buku Tahunan Siswa
-        </a>
+		<div class="container-fluid">
+			<a class="navbar-brand" href="#">
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<i id="toggle-icon" class="fa-solid fa-bars"></i>
+				</button>
+				Jurnalistik - Buku Tahunan Siswa
+			</a>
 
 
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <!-- Ikon-ikon berada di sebelah kanan -->
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="login">
-                        <div class="download-icon">
-                            <i class="fas fa-download"></i>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" onclick="toggleAutoplay()">
-                        <div class="autoplay-icon">
-                            <i id="autoplay-btn" class="fas fa-play"></i>
-                        </div>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" onclick="openSidebar()">
-                        <div id="open-btn" class="open-btn" onclick="toggleSidebar()">
-                            <i id="open-icon" class="fas fa-bars"></i>
-                            <i id="close-icon" class="fas fa-times"></i>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<!-- Ikon-ikon berada di sebelah kanan -->
+				<ul class="navbar-nav ms-auto">
+					<li class="nav-item">
+						<a class="nav-link" href="login">
+							<div class="download-icon">
+								<i class="fas fa-download"></i>
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" onclick="toggleAutoplay()">
+							<div class="autoplay-icon">
+								<i id="autoplay-btn" class="fas fa-play"></i>
+							</div>
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" onclick="openSidebar()">
+							<div id="open-btn" class="open-btn" onclick="toggleSidebar()">
+								<i id="open-icon" class="fas fa-bars"></i>
+								<i id="close-icon" class="fas fa-times"></i>
+							</div>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
 
 
 	<div class="sidebar" id="sidebar">
-	<a href="#" class="close-btn" onclick="closeSidebar(event)">&times;</a>
+		<a href="#" class="close-btn" onclick="closeSidebar(event)">&times;</a>
 		<a href="#hero" onclick="closeSidebar()">Buku Tahunan Siswa</a>
 		<a href="#sampuldepan" onclick="closeSidebar()">Sampul Depan</a>
 		<a href="#daftarisi" onclick="closeSidebar()">Daftar Isi</a>
@@ -330,7 +331,7 @@
 		</section>
 		<section id="wks" class="bts">
 			<img id="play-button" src="<?php echo base_url('assets/img/bts-2021/img003.jpg') ?>" alt="Play Video" onclick="playVideo()" />
-			<iframe id="video-frame" display max-width="100%" height="auto" src="https://www.youtube.com/embed/fY585EuqG_4?si=5AcFNEJP1PnYNe8S" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>" />
+			<iframe id="video-frame" display width="100%" height="950px" src="https://www.youtube.com/embed/IUqF6cAKR6Q?si=6trCh90hSkorBIzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		</section>
 		<section id="datguru" class="bts">
 			<img src="<?php echo base_url('assets/img/bts-2021/img004.jpg'); ?>" />
@@ -341,8 +342,10 @@
 			<img src="<?php echo base_url('assets/img/bts-2021/img008.jpg'); ?>" />
 		</section>
 		<section id="wkps" class="bts">
-			<img src="<?php echo base_url('assets/img/bts-2021/img009.jpg'); ?>" />
+			<img id="play-button-2" src="<?php echo base_url('assets/img/bts-2021/img009.jpg') ?>" alt="Play Video" onclick="playVideo2()" />
+			<iframe id="video-frame-2" width="100%" height="950px" src="https://www.youtube.com/embed/bgdK78s-5Y0?si=E-zB91iH1fqFDubA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
 		</section>
+
 		<section id="fbps" class="bts">
 			<img src="<?php echo base_url('assets/img/bts-2021/img010.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img011.jpg'); ?>" />
@@ -425,15 +428,15 @@
 		}
 
 		function closeSidebar(event) {
-    event.preventDefault(); // Menghentikan perilaku default dari tombol
-    var sidebar = document.getElementById("sidebar");
-    var openBtn = document.getElementById("open-btn");
-    var downloadIcon = document.getElementById("download-icon");
+			event.preventDefault(); // Menghentikan perilaku default dari tombol
+			var sidebar = document.getElementById("sidebar");
+			var openBtn = document.getElementById("open-btn");
+			var downloadIcon = document.getElementById("download-icon");
 
-    sidebar.style.width = "0";
-    openBtn.style.display = "block"; // Menampilkan kembali icon toggle
-    document.body.style.overflow = "auto"; // Mengaktifkan scroll kembali
-}
+			sidebar.style.width = "0";
+			openBtn.style.display = "block"; // Menampilkan kembali icon toggle
+			document.body.style.overflow = "auto"; // Mengaktifkan scroll kembali
+		}
 
 
 		let isAutoplay = false;
