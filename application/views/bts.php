@@ -258,6 +258,50 @@
 				flex-grow: 1;
 			}
 		}
+
+		/* Sidebar Dropdown Styling */
+		.dropdown-content {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			min-width: 200px;
+			z-index: 1;
+		}
+
+		.dropdown-content a {
+			color: black;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+		}
+
+		.dropdown-content a:hover {
+			background-color: #007bff;
+		}
+
+		.dropdown-toggle .fa-caret-down {
+			margin-left: 5px;
+		}
+
+		/* Show dropdown content on hover */
+		.dropdown-toggle:hover+.dropdown-content {
+			display: block;
+		}
+
+		.dropdown-content {
+			display: none;
+			/* Sembunyikan dropdown secara default */
+			position: absolute;
+			background-color: #fff;
+			min-width: 200px;
+			z-index: 1;
+		}
+
+		.dropdown-toggle:hover+.dropdown-content,
+		.dropdown-content:hover {
+			display: block;
+			/* Tampilkan dropdown saat di-hover pada dropdown toggle atau dropdown content */
+		}
 	</style>
 
 </head>
@@ -316,7 +360,17 @@
 		<a href="#fbps" onclick="closeSidebar()">Pengurus OSIS</a>
 		<a href="#" onclick="closeSidebar()">Dewan Perwakilan Kelas</a>
 		<a href="#" onclick="closeSidebar()">Program Keahlian</a>
-		<a href="#dss" onclick="closeSidebar()">Siswa dan Siswi</a>
+		<a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
+			Siswa dan Siswi
+			<i id="caret-icon" class="fas fa-caret-down"></i>
+		</a>
+		<div id="siswa-dropdown" class="dropdown-content">
+			<a href="#dss" onclick="closeSidebar()">OTKP 1</a>
+			<a href="#otkp-2" onclick="closeSidebar()">OTKP 2</a>
+			<!-- Tambahkan submenu lainnya di sini -->
+		</div>
+
+
 		<a href="#" onclick="closeSidebar()">Foto Ekstrakurikuler</a>
 		<a href="#sb" onclick="closeSidebar()">Sampul Belakang</a>
 	</div>
@@ -331,7 +385,7 @@
 		</section>
 		<section id="wks" class="bts">
 			<img id="play-button" src="<?php echo base_url('assets/img/bts-2021/img003.jpg') ?>" alt="Play Video" onclick="playVideo()" />
-			<iframe id="video-frame" display width="100%" height="950px" src="https://www.youtube.com/embed/IUqF6cAKR6Q?si=6trCh90hSkorBIzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+			<iframe id="video-frame" display width="100%" height="700px" src="https://www.youtube.com/embed/IUqF6cAKR6Q?si=6trCh90hSkorBIzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		</section>
 		<section id="datguru" class="bts">
 			<img src="<?php echo base_url('assets/img/bts-2021/img004.jpg'); ?>" />
@@ -343,7 +397,7 @@
 		</section>
 		<section id="wkps" class="bts">
 			<img id="play-button-2" src="<?php echo base_url('assets/img/bts-2021/img009.jpg') ?>" alt="Play Video" onclick="playVideo2()" />
-			<iframe id="video-frame-2" width="100%" height="950px" src="https://www.youtube.com/embed/bgdK78s-5Y0?si=E-zB91iH1fqFDubA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
+			<iframe id="video-frame-2" width="100%" height="890px" src="https://www.youtube.com/embed/bgdK78s-5Y0?autoplay=1&si=E-zB91iH1fqFDubA&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
 		</section>
 
 		<section id="fbps" class="bts">
@@ -357,12 +411,15 @@
 			<img src="<?php echo base_url('assets/img/bts-2021/img015.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img016.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img017.jpg'); ?>" />
+
+			<div id="otkp-2">
 			<img src="<?php echo base_url('assets/img/bts-2021/img018.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img019.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img020.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img021.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img022.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img023.jpg'); ?>" />
+			</div>
 		</section>
 		<section id="jurusan" class="bts">
 			<img src="<?php echo base_url('assets/img/bts-2021/img024.jpg'); ?>" />
@@ -466,6 +523,54 @@
 		function stopAutoplay() {
 			clearInterval(scrollInterval);
 		}
+		// Membuat variabel untuk menyimpan status dropdown
+		let isDropdownOpen = false;
+
+		function toggleDropdown(event) {
+			const dropdownContent = event.currentTarget.nextElementSibling;
+			const caretIcon = event.currentTarget.querySelector('.fas.fa-caret-down');
+
+			// Memeriksa apakah dropdown sedang terbuka
+			if (isDropdownOpen) {
+				dropdownContent.style.display = 'none';
+				caretIcon.classList.remove('rotate-icon');
+				isDropdownOpen = false;
+			} else {
+				// Menutup dropdown lain jika ada yang terbuka
+				document.querySelectorAll('.dropdown-content').forEach(item => {
+					if (item !== dropdownContent && item.style.display === 'block') {
+						item.style.display = 'none';
+						const otherCaretIcon = item.previousElementSibling.querySelector('.fas.fa-caret-down');
+						otherCaretIcon.classList.remove('rotate-icon');
+					}
+				});
+
+				// Membuka dropdown yang di-klik
+				dropdownContent.style.display = 'block';
+				caretIcon.classList.add('rotate-icon');
+				isDropdownOpen = true;
+			}
+
+			event.stopPropagation(); // Menghentikan event bubbling agar dropdown tidak menutup sendiri saat diklik
+		}
+
+		// Menambahkan event listener ke setiap dropdown toggle
+		document.querySelectorAll('.dropdown-toggle').forEach(item => {
+			item.addEventListener('click', toggleDropdown);
+		});
+
+		// Menutup dropdown saat klik di luar dropdown
+		window.addEventListener('click', function(event) {
+			if (isDropdownOpen) {
+				document.querySelectorAll('.dropdown-content').forEach(item => {
+					item.style.display = 'none';
+					const caretIcon = item.previousElementSibling.querySelector('.fas.fa-caret-down');
+					caretIcon.classList.remove('rotate-icon');
+				});
+				isDropdownOpen = false;
+			}
+		});
+		``
 	</script>
 
 </body>

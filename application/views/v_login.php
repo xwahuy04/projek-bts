@@ -138,7 +138,7 @@
 					<td><input type="submit" value="Login"></td>
 				</tr>
 				<tr>
-					<td><a href="http://localhost/projek-bts/" class="btn-back">Kembali</a></td>
+					<td><a href="../projek-bts/" class="btn-back">Kembali</a></td>
 				</tr>
 
 			</table>
