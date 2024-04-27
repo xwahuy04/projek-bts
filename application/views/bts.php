@@ -410,32 +410,58 @@
 	<main id="main">
 
 		<section id="sampuldepan" class="bts" style="padding-top: 85px;">
-			<img src="<?php echo base_url('assets/img/bts-2021/img001.jpg'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/1.png'); ?>" />
 		</section>
+
 		<section id="daftarisi" class="bts">
-			<img src="<?php echo base_url('assets/img/bts-2021/img002.jpg'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/2.png'); ?>" />
 		</section>
-		<section id="wks" class="bts">
-			<img id="play-button" src="<?php echo base_url('assets/img/bts-2021/img003.jpg') ?>" alt="Play Video" onclick="playVideo()" />
+
+		<section id="ucapankepalasekolah" class="bts">
+			<img src="<?php echo base_url('assets/img/1-20/3.png'); ?>" />
+			<img id="play-button" src="<?php echo base_url('assets/img/1-20/4.png') ?>" alt="Play Video" onclick="playVideo()" />
 			<iframe id="video-frame" display width="100%" height="700px" src="https://www.youtube.com/embed/IUqF6cAKR6Q?si=6trCh90hSkorBIzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		</section>
+
 		<section id="datguru" class="bts">
-			<img src="<?php echo base_url('assets/img/bts-2021/img004.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img004.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img005.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img006.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img007.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img008.jpg'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/5.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/6.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/7.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/8.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/9.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/10.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/11.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/12.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/13.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/14.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/15.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/16.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/17.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/18.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/19.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/1-20/20.png'); ?>" />
 		</section>
-		<section id="wkps" class="bts">
-			<img id="play-button-2" src="<?php echo base_url('assets/img/bts-2021/img009.jpg') ?>" alt="Play Video" onclick="playVideo2()" />
+
+		<section id="ucapanketuaosis" class="bts">
+			<img id="play-button-2" src="<?php echo base_url('assets/img/21-40/21.png') ?>" alt="Play Video" onclick="playVideo2()" />
 			<iframe id="video-frame-2" width="100%" height="890px" src="https://www.youtube.com/embed/bgdK78s-5Y0?autoplay=1&si=E-zB91iH1fqFDubA&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen style="display: none;"></iframe>
 		</section>
 
-		<section id="fbps" class="bts">
-			<img src="<?php echo base_url('assets/img/bts-2021/img010.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img011.jpg'); ?>" />
+		<section id="pengurusosis" class="bts">
+			<img src="<?php echo base_url('assets/img/21-40/22.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/21-40/23.png'); ?>" />
 		</section>
+
+		<section id="dpk" class="bts">
+			<img src="<?php echo base_url('assets/img/21-40/24.png'); ?>" />
+		</section>
+
+		<section id="programkeahlian" class="bts">
+			<img src="<?php echo base_url('assets/img/21-40/24.png'); ?>" />
+		</section>
+
+		
+
 		<section id="dss" class="bts">
 			<img src="<?php echo base_url('assets/img/bts-2021/img012.jpg'); ?>" />
 			<img src="<?php echo base_url('assets/img/bts-2021/img013.jpg'); ?>" />
