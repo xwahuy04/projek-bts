@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-	<title>Jurnalistik - Buku Tahunan Siswa</title>
+	<title>Buku Tahunan Siswa</title>
 	<meta content="" name="description">
 	<meta content="" name="keywords">
 	<link href="<?php echo base_url('assets/img/LOGO_JURNALISTIK.png'); ?>" rel="icon">
@@ -302,6 +302,26 @@
 			display: block;
 			/* Tampilkan dropdown saat di-hover pada dropdown toggle atau dropdown content */
 		}
+
+
+		/* Perbarui CSS untuk submenu "Siswa dan Siswi" */
+		.sidebar #siswa-dropdown {
+			display: none;
+			/* Sembunyikan submenu secara default */
+			background-color: #fff;
+			padding: 10px;
+			position: absolute;
+			top: 50px;
+			left: 0;
+			width: 100%;
+			z-index: 1001;
+		}
+
+		.sidebar .dropdown-toggle:hover+#siswa-dropdown,
+		#siswa-dropdown:hover {
+			display: block;
+			/* Tampilkan submenu saat di-hover pada dropdown toggle atau submenu itu sendiri */
+		}
 	</style>
 
 </head>
@@ -351,28 +371,40 @@
 
 	<div class="sidebar" id="sidebar">
 		<a href="#" class="close-btn" onclick="closeSidebar(event)">&times;</a>
-		<a href="#hero" onclick="closeSidebar()">Buku Tahunan Siswa</a>
 		<a href="#sampuldepan" onclick="closeSidebar()">Sampul Depan</a>
 		<a href="#daftarisi" onclick="closeSidebar()">Daftar Isi</a>
-		<a href="#wks" onclick="closeSidebar()">Kepala Sekolah</a>
-		<a href="#datguru" onclick="closeSidebar()">Guru dan Karyawan</a>
-		<a href="#wkps" onclick="closeSidebar()">Ketua Pengurus OSIS</a>
-		<a href="#fbps" onclick="closeSidebar()">Pengurus OSIS</a>
-		<a href="#" onclick="closeSidebar()">Dewan Perwakilan Kelas</a>
-		<a href="#" onclick="closeSidebar()">Program Keahlian</a>
+		<a href="#ucapankepalasekolah" onclick="closeSidebar()">Ucapan Kepala Sekolah</a>
+		<a href="#gurudankaryawan" onclick="closeSidebar()">Guru dan Karyawan</a>
+		<a href="#ucapanketuaosis" onclick="closeSidebar()">Ucapan Ketua OSIS</a>
+		<a href="#pengurusosis" onclick="closeSidebar()">Pengurus OSIS</a>
+		<a href="#dpk" onclick="closeSidebar()">Dewan Perwakilan Kelas</a>
+		<a href="#programkeahlian" onclick="closeSidebar()">Program Keahlian</a>
 		<a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
 			Siswa dan Siswi
-			<i id="caret-icon" class="fas fa-caret-down"></i>
+			
 		</a>
 		<div id="siswa-dropdown" class="dropdown-content">
-			<a href="#dss" onclick="closeSidebar()">OTKP 1</a>
-			<a href="#otkp-2" onclick="closeSidebar()">OTKP 2</a>
+			<a href="#OTKP1" onclick="closeSidebar()">OTKP 1</a>
+			<a href="#OTKP2" onclick="closeSidebar()">OTKP 2</a>
+			<a href="#AKL1" onclick="closeSidebar()">AKL 1</a>
+			<a href="#AKL2" onclick="closeSidebar()">AKL 2</a>
+			<a href="#PBK" onclick="closeSidebar()">PBK</a>
+			<a href="#BD2" onclick="closeSidebar()">BDP 2</a>
+			<a href="#ALFA" onclick="closeSidebar()">ALFA</a>
+			<a href="#MM1" onclick="closeSidebar()">MM 1</a>
+			<a href="#MM2" onclick="closeSidebar()">MM 2</a>
+			<a href="#KIN1" onclick="closeSidebar()">KIN 1</a>
+			<a href="#KIN2" onclick="closeSidebar()">KIN 2</a>
+			<a href="#RPL" onclick="closeSidebar()">RPL</a>
+			<a href="#DSG" onclick="closeSidebar()">DSG</a>
+			<a href="#TKJ1" onclick="closeSidebar()">TKJ 1</a>
+			<a href="#TKJ2" onclick="closeSidebar()">TKJ 2</a>
 			<!-- Tambahkan submenu lainnya di sini -->
 		</div>
 
 
-		<a href="#" onclick="closeSidebar()">Foto Ekstrakurikuler</a>
-		<a href="#sb" onclick="closeSidebar()">Sampul Belakang</a>
+		<a href="#fotoekskul" onclick="closeSidebar()">Foto Ekstrakurikuler</a>
+		<a href="#sampulbelakang" onclick="closeSidebar()">Sampul Belakang</a>
 	</div>
 
 	<main id="main">
@@ -413,12 +445,12 @@
 			<img src="<?php echo base_url('assets/img/bts-2021/img017.jpg'); ?>" />
 
 			<div id="otkp-2">
-			<img src="<?php echo base_url('assets/img/bts-2021/img018.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img019.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img020.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img021.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img022.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img023.jpg'); ?>" />
+				<img src="<?php echo base_url('assets/img/bts-2021/img018.jpg'); ?>" />
+				<img src="<?php echo base_url('assets/img/bts-2021/img019.jpg'); ?>" />
+				<img src="<?php echo base_url('assets/img/bts-2021/img020.jpg'); ?>" />
+				<img src="<?php echo base_url('assets/img/bts-2021/img021.jpg'); ?>" />
+				<img src="<?php echo base_url('assets/img/bts-2021/img022.jpg'); ?>" />
+				<img src="<?php echo base_url('assets/img/bts-2021/img023.jpg'); ?>" />
 			</div>
 		</section>
 		<section id="jurusan" class="bts">
