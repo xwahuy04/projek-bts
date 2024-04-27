@@ -389,6 +389,7 @@
 			<a href="#AKL1" onclick="closeSidebar()">AKL 1</a>
 			<a href="#AKL2" onclick="closeSidebar()">AKL 2</a>
 			<a href="#PBK" onclick="closeSidebar()">PBK</a>
+			<a href="#BD1" onclick="closeSidebar()">BDP 1</a>
 			<a href="#BD2" onclick="closeSidebar()">BDP 2</a>
 			<a href="#ALFA" onclick="closeSidebar()">ALFA</a>
 			<a href="#MM1" onclick="closeSidebar()">MM 1</a>
@@ -402,7 +403,7 @@
 			<!-- Tambahkan submenu lainnya di sini -->
 		</div>
 
-
+		<a href="#fotoangkatan" onclick="closeSidebar()">Foto Angkatan</a>
 		<a href="#fotoekskul" onclick="closeSidebar()">Foto Ekstrakurikuler</a>
 		<a href="#sampulbelakang" onclick="closeSidebar()">Sampul Belakang</a>
 	</div>
@@ -465,7 +466,6 @@
 
 		<section id="sds" class="bts">
 			<div id="OTKP1">
-				<img src="<?php echo base_url('assets/img/21-40/28.png'); ?>" />
 				<img src="<?php echo base_url('assets/img/21-40/29.png'); ?>" />
 				<img src="<?php echo base_url('assets/img/21-40/30.png'); ?>" />
 				<img src="<?php echo base_url('assets/img/21-40/31.png'); ?>" />
@@ -473,23 +473,140 @@
 				<img src="<?php echo base_url('assets/img/21-40/33.png'); ?>" />
 				<img src="<?php echo base_url('assets/img/21-40/34.png'); ?>" />
 			</div>
-			<div id="otkp-2">
-				<img src="<?php echo base_url('assets/img/bts-2021/img020.jpg'); ?>" />
-				<img src="<?php echo base_url('assets/img/bts-2021/img019.jpg'); ?>" />
-				<img src="<?php echo base_url('assets/img/bts-2021/img020.jpg'); ?>" />
-				<img src="<?php echo base_url('assets/img/bts-2021/img021.jpg'); ?>" />
-				<img src="<?php echo base_url('assets/img/bts-2021/img022.jpg'); ?>" />
-				<img src="<?php echo base_url('assets/img/bts-2021/img023.jpg'); ?>" />
+			<div id="OTKP2">
+				<img src="<?php echo base_url('assets/img/21-40/35.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/36.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/37.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/38.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/39.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/40.png'); ?>" />
+			</div>
+			<div id="AKL1">
+				<img src="<?php echo base_url('assets/img/41-60/41.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/42.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/43.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/44.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/45.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/46.png'); ?>" />
+			</div>
+			<div id="AKL2">
+				<img src="<?php echo base_url('assets/img/41-60/47.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/48.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/49.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/50.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/51.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/52.png'); ?>" />
+			</div>
+			<div id="PBK">
+				<img src="<?php echo base_url('assets/img/41-60/53.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/54.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/55.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/56.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/57.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/58.png'); ?>" />
+			</div>
+			<div id="BDP1">
+				<img src="<?php echo base_url('assets/img/41-60/59.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/41-60/60.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/61.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/62.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/63.png'); ?>" />
+			</div>
+			<div id="BDP2">
+				<img src="<?php echo base_url('assets/img/60-91/64.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/65.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/66.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/67.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/68.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/69.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/70.png'); ?>" />
+			</div>
+			<div id="ALFA">
+				<img src="<?php echo base_url('assets/img/60-91/71.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/72.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/73.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/74.png'); ?>" />
+			</div>
+			<div id="MM1">
+				<img src="<?php echo base_url('assets/img/60-91/75.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/76.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/77.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/78.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/79.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/80.png'); ?>" />
+			</div>
+			<div id="MM2">
+				<img src="<?php echo base_url('assets/img/60-91/81.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/82.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/83.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/84.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/85.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/86.png'); ?>" />
+			</div>
+			<div id="KIN1">
+				<img src="<?php echo base_url('assets/img/60-91/87.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/88.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/89.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/60-91/90.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/91.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/92.png'); ?>" />
+			</div>
+			<div id="KIN2">
+				<img src="<?php echo base_url('assets/img/91-121/93.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/94.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/95.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/96.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/97.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/98.png'); ?>" />
+			</div>
+			<div id="RPL">
+				<img src="<?php echo base_url('assets/img/91-121/99.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/100.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/101.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/102.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/103.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/104.png'); ?>" />
+			</div>
+			<div id="DSG">
+				<img src="<?php echo base_url('assets/img/91-121/105.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/106.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/107.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/108.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/109.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/110.png'); ?>" />
+			</div>
+			<div id="TKJ1">
+				<img src="<?php echo base_url('assets/img/91-121/111.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/112.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/113.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/114.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/115.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/116.png'); ?>" />
+			</div>
+			<div id="TKJ2">
+				<img src="<?php echo base_url('assets/img/91-121/117.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/118.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/119.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/120.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/91-121/121.png'); ?>" />
 			</div>
 		</section>
-		<section id="jurusan" class="bts">
-			<img src="<?php echo base_url('assets/img/bts-2021/img024.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img025.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img026.jpg'); ?>" />
+
+		<section id="fotoangkatan" class="bts">
+			<img src="<?php echo base_url('assets/img/122-127/122.png'); ?>" />
 		</section>
-		<section id="sb" class="bts">
-			<img src="<?php echo base_url('assets/img/bts-2021/img027.jpg'); ?>" />
+
+		<section id="fotoeksul" class="bts">
+			<img src="<?php echo base_url('assets/img/122-127/123.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/122-127/124.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/122-127/125.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/122-127/126.png'); ?>" />
 		</section>
+
+		<section id="sampulbelakang" class="bts">
+			<img src="<?php echo base_url('assets/img/122-127/127.png'); ?>" />
+		</section>
+
 	</main>
 
 	<footer id="footer">
