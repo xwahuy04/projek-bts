@@ -331,9 +331,9 @@
 		<div class="container-fluid">
 			<a class="navbar-brand" href="#">
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-					<i id="toggle-icon" class="fa-solid fa-bars"></i>
+					<i id="toggle-icon" class="fa-solid fa-bars" onclick="toggleIcon()"></i>
 				</button>
-				Jurnalistik - Buku Tahunan Siswa
+					Buku Tahunan Siswa
 			</a>
 
 
@@ -423,7 +423,7 @@
 			<iframe id="video-frame" display width="100%" height="700px" src="https://www.youtube.com/embed/IUqF6cAKR6Q?si=6trCh90hSkorBIzj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 		</section>
 
-		<section id="datguru" class="bts">
+		<section id="gurudankaryawan" class="bts">
 			<img src="<?php echo base_url('assets/img/1-20/5.png'); ?>" />
 			<img src="<?php echo base_url('assets/img/1-20/6.png'); ?>" />
 			<img src="<?php echo base_url('assets/img/1-20/7.png'); ?>" />
@@ -457,21 +457,24 @@
 		</section>
 
 		<section id="programkeahlian" class="bts">
-			<img src="<?php echo base_url('assets/img/21-40/24.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/21-40/25.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/21-40/26.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/21-40/27.png'); ?>" />
+			<img src="<?php echo base_url('assets/img/21-40/28.png'); ?>" />
 		</section>
 
-		
-
-		<section id="dss" class="bts">
-			<img src="<?php echo base_url('assets/img/bts-2021/img012.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img013.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img014.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img015.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img016.jpg'); ?>" />
-			<img src="<?php echo base_url('assets/img/bts-2021/img017.jpg'); ?>" />
-
+		<section id="sds" class="bts">
+			<div id="OTKP1">
+				<img src="<?php echo base_url('assets/img/21-40/28.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/29.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/30.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/31.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/32.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/33.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/21-40/34.png'); ?>" />
+			</div>
 			<div id="otkp-2">
-				<img src="<?php echo base_url('assets/img/bts-2021/img018.jpg'); ?>" />
+				<img src="<?php echo base_url('assets/img/bts-2021/img020.jpg'); ?>" />
 				<img src="<?php echo base_url('assets/img/bts-2021/img019.jpg'); ?>" />
 				<img src="<?php echo base_url('assets/img/bts-2021/img020.jpg'); ?>" />
 				<img src="<?php echo base_url('assets/img/bts-2021/img021.jpg'); ?>" />
@@ -540,6 +543,11 @@
 				sidebar.style.width = "250px"; // Menggeser icon download saat sidebar terbuka
 				openBtn.style.display = "none"; // Sembunyikan icon toggle saat sidebar terbuka
 			}
+		}
+
+		function toggleIcon(){
+			event.preventDefault(); // Menghentikan perilaku bawaan dari anchor tag
+        	toggleSidebar(); // Panggil fungsi toggleSidebar setelah menghentikan default behavior
 		}
 
 		function closeSidebar(event) {
@@ -628,7 +636,7 @@
 				isDropdownOpen = false;
 			}
 		});
-		``
+		
 	</script>
 
 </body>
