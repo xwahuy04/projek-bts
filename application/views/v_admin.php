@@ -11,17 +11,15 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            /* Font untuk teks */
-            background-color: #f0f0f0;
-            /* Warna latar belakang */
             margin: 0;
             padding: 0;
             display: flex;
             justify-content: center;
-            /* Mengatur konten ke tengah secara horizontal */
             align-items: center;
-            /* Mengatur konten ke tengah secara vertikal */
             min-height: 100vh;
+            background: url(<?php echo base_url('assets/img/background.png'); ?>);
+            background-position: center;
+            background-size: cover;
         }
 
         h1 {
@@ -29,7 +27,7 @@
             /* Posisi teks rata tengah */
             margin-top: 50px;
             /* Margin atas */
-            color: #333;
+            color: black;
             /* Warna teks */
             font-size: 2rem;
         }
@@ -41,9 +39,9 @@
             /* Posisi di tengah halaman */
             padding: 100px;
             /* Padding */
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.80);
             /* Warna latar belakang */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
             /* Shadow untuk efek depth */
             text-align: center;
             /* Menengahkan konten di dalam container */
@@ -54,7 +52,7 @@
             /* Posisi teks rata tengah */
             margin-top: 20px;
             /* Margin atas */
-            color: #555;
+            color: black;
             /* Warna teks */
             margin-bottom: 50px;
         }
@@ -103,13 +101,30 @@
                 padding: 8px 16px;
                 /* Ukuran tombol pada layar kecil */
             }
+
+            .download-btn,
+            .logout-btn {
+                display: inline-block;
+                padding: 10px 20px;
+                background-color: #007bff;
+                color: #fff;
+                text-decoration: none;
+                border-radius: 5px;
+                margin-right: 10px;
+                transition: background-color 0.3s ease;
+            }
+
+            .download-btn:hover,
+            .logout-btn:hover {
+                background-color: #fff;
+            }
         }
     </style>
 </head>
 
 <body>
     <div class="container">
-        <h1 class="selamat">Selamat datang di Buku Tahunan siswa Elektronik</h1>
+        <h1>Selamat datang di Buku Tahunan Siswa Elektronik</h1>
         <div class="welcome-message">
             <?php
             // Ambil data nama pengguna dari session

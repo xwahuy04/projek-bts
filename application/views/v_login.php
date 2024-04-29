@@ -2,87 +2,79 @@
 <html>
 
 <head>
-	<title>Form Login | Jurnalistik Smekensa</title>
+	<title>Form Login | Buku  Tahunan Siswa</title>
 	<link href="<?php echo base_url('assets/img/LOGO_JURNALISTIK.png'); ?>" rel="icon">
 	<link href="<?php echo base_url('assets/img/LOGO_JURNALISTIK.png'); ?>" rel="apple-touch-icon">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
-			background-color: #fff;
-			/* Warna latar belakang putih */
+			background: url(<?php echo base_url('assets/img/background.png'); ?>);
+			background-position: center;
+			background-size:cover;
+			display:flex;
+			justify-content: center;
+			align-items: center;
 			font-family: Arial, sans-serif;
-			/* Font untuk teks */
+			min-height: 100vh;
 			margin: 0;
 			padding: 0;
+		}
+
+		.container {
+			max-width: 960px;
+			margin: 0 auto;
+			padding: 100px;
+			background-color: rgba(255, 255, 255, 0.80);
+			box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+			text-align: center;
 		}
 
 		h1 {
 			text-align: center;
 			margin-bottom: 50px;
 			margin-top: 20px;
-			/* Posisi teks rata tengah */
 		}
 
 		form {
 			max-width: 400px;
-			/* Lebar maksimum form */
 			margin: 20px auto;
-			/* Posisi form di tengah halaman */
 			padding: 20px;
 
-			/* Warna latar belakang form */
 			border-radius: 5px;
-			/* Sudut border melengkung */
 		}
 
 		table {
 			width: 100%;
-			/* Lebar tabel 100% */
 			border-collapse: collapse;
-			/* Gabungkan border sel */
 		}
 
 		table td {
 			padding: 10px;
-			/* Padding untuk sel tabel */
 			border: none;
-			/* Hapus border pada sel */
 		}
 
 		input[type="text"] {
 			width: calc(100% - 20px);
-			/* Lebar input 100% dikurangi padding */
 			padding: 8px;
-			/* Padding input */
 			margin-bottom: 10px;
-			/* Margin bawah input */
 			box-sizing: border-box;
-			/* Ukuran box termasuk border dan padding */
 			border-radius: 5px;
-			/* Sudut border melengkung */
+			text-align: center;
 		}
 
 		input[type="submit"] {
 			width: 100%;
-			/* Lebar tombol 100% */
 			padding: 8px;
-			/* Padding tombol */
 			background-color: #000ff0;
-			/* Warna tombol login */
 			color: #fff;
-			/* Warna teks tombol login */
 			border: none;
-			/* Tanpa border */
 			cursor: pointer;
-			/* Pointer saat dihover */
 		}
 
 		input[type="submit"]:hover {
 			background-color: #000ff0;
-			/* Warna tombol saat dihover */
 		}
 
-		/* Responsive Styles */
 		@media screen and (max-width: 480px) {
 			form {
 				padding: 10px;
@@ -97,16 +89,7 @@
 			text-align: center;
 		}
 
-		.container {
-			justify-content: center;
-			text-align: center;
-		}
 
-		.judul {
-			margin-top: 200px;
-		}
-
-	  /* Gaya untuk tombol Kembali */
 	  .btn-back {
             display: inline-block;
             padding: 8px 20px;
@@ -120,6 +103,7 @@
             background-color: #aaa;
         }
 
+
 	</style>
 </head>
 
@@ -127,12 +111,12 @@
 	<div class="container">
 		<h1 class="judul">Login Buku Tahunan Siswa Elektronik</h1>
 		<form action="<?php echo base_url('login/aksi_login'); ?>" method="post">
-			<table style="border: none;"> <!-- Hapus border pada tabel -->
+			<table style="border: none;"> 
 				<tr>
 					<td><label for="nis" class="pesan">Masukkan NIS Anda</label></td>
 				</tr>
 				<tr>
-					<td><input type="text" id="nis" name="nis"></td>
+					<td><input type="text" id="nis" name="nis" placeholder="NIS"></td>
 				</tr>
 				<tr>
 					<td><input type="submit" value="Login"></td>
