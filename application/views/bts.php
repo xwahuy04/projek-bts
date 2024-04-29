@@ -333,7 +333,7 @@
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 					<i id="toggle-icon" class="fa-solid fa-bars" onclick="toggleIcon()"></i>
 				</button>
-					Buku Tahunan Siswa
+				Buku Tahunan Siswa
 			</a>
 
 
@@ -381,7 +381,7 @@
 		<a href="#programkeahlian" onclick="closeSidebar()">Program Keahlian</a>
 		<a href="#" class="dropdown-toggle" onclick="toggleDropdown(event)">
 			Siswa dan Siswi
-			
+
 		</a>
 		<div id="siswa-dropdown" class="dropdown-content">
 			<a href="#OTKP1" onclick="closeSidebar()">OTKP 1</a>
@@ -389,8 +389,8 @@
 			<a href="#AKL1" onclick="closeSidebar()">AKL 1</a>
 			<a href="#AKL2" onclick="closeSidebar()">AKL 2</a>
 			<a href="#PBK" onclick="closeSidebar()">PBK</a>
-			<a href="#BD1" onclick="closeSidebar()">BDP 1</a>
-			<a href="#BD2" onclick="closeSidebar()">BDP 2</a>
+			<a href="#BDP1" onclick="closeSidebar()">BDP 1</a>
+			<a href="#BDP2" onclick="closeSidebar()">BDP 2</a>
 			<a href="#ALFA" onclick="closeSidebar()">ALFA</a>
 			<a href="#MM1" onclick="closeSidebar()">MM 1</a>
 			<a href="#MM2" onclick="closeSidebar()">MM 2</a>
@@ -508,46 +508,46 @@
 			<div id="BDP1">
 				<img src="<?php echo base_url('assets/img/41-60/59.png'); ?>" />
 				<img src="<?php echo base_url('assets/img/41-60/60.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/61.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/62.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/63.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/61.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/62.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/63.png'); ?>" />
 			</div>
 			<div id="BDP2">
-				<img src="<?php echo base_url('assets/img/60-91/64.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/65.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/66.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/67.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/68.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/69.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/70.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/64.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/65.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/66.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/67.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/68.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/69.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/70.png'); ?>" />
 			</div>
 			<div id="ALFA">
-				<img src="<?php echo base_url('assets/img/60-91/71.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/72.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/73.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/74.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/71.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/72.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/73.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/74.png'); ?>" />
 			</div>
 			<div id="MM1">
-				<img src="<?php echo base_url('assets/img/60-91/75.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/76.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/77.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/78.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/79.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/80.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/75.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/76.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/77.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/78.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/79.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/80.png'); ?>" />
 			</div>
 			<div id="MM2">
-				<img src="<?php echo base_url('assets/img/60-91/81.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/82.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/83.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/84.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/85.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/86.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/81.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/82.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/83.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/84.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/85.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/86.png'); ?>" />
 			</div>
 			<div id="KIN1">
-				<img src="<?php echo base_url('assets/img/60-91/87.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/88.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/89.png'); ?>" />
-				<img src="<?php echo base_url('assets/img/60-91/90.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/87.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/88.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/89.png'); ?>" />
+				<img src="<?php echo base_url('assets/img/61-91/90.png'); ?>" />
 				<img src="<?php echo base_url('assets/img/91-121/91.png'); ?>" />
 				<img src="<?php echo base_url('assets/img/91-121/92.png'); ?>" />
 			</div>
@@ -662,9 +662,9 @@
 			}
 		}
 
-		function toggleIcon(){
+		function toggleIcon() {
 			event.preventDefault(); // Menghentikan perilaku bawaan dari anchor tag
-        	toggleSidebar(); // Panggil fungsi toggleSidebar setelah menghentikan default behavior
+			toggleSidebar(); // Panggil fungsi toggleSidebar setelah menghentikan default behavior
 		}
 
 		function closeSidebar(event) {
@@ -753,7 +753,6 @@
 				isDropdownOpen = false;
 			}
 		});
-		
 	</script>
 
 </body>
